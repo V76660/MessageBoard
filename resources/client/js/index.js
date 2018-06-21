@@ -93,17 +93,18 @@ function resetDeleteButtons() {
         });
 
     });
-    function cancelEdits() {
 
-        $(".messageEditInput").hide();
-        $(".cancelEditMessage").hide();
-        $(".saveMessage").hide();
 
-        $(".messageText").show();
-        $(".editMessage").show();
-        $(".deleteMessage").show();
-    }
+}
+function cancelEdits() {
 
+    $(".messageEditInput").hide();
+    $(".cancelEditMessage").hide();
+    $(".saveMessage").hide();
+
+    $(".messageText").show();
+    $(".editMessage").show();
+    $(".deleteMessage").show();
 }
 function resetEditButtons() {
     $('.editMessage').click(event => {

@@ -76,13 +76,17 @@ public class MessageController {
     @Path("edit")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.TEXT_PLAIN)
-    public String editMessage(@FormParam("messageId") int messageId) {
+    public String editMessage(@FormParam("messageId") int messageId, @FormParam("messageText") String messageText) {
         Console.log("/message/edit - Message " + messageId);
         Message message = MessageService.selectById(messageId);
         if (message == null) {
             return "That message doesn't appear to exist";
         } else {
-            return MessageService.deleteById(messageId);
+            String messageDate = new Date().toString();
+            message.setText(messageText);
+            message.setPostDate(messageDate);
+
+            return MessageService.update(message);
         }
     }
 }
