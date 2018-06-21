@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+    <head>
+
+        <title>Message Board</title>
+
+        <link rel="shortcut icon" href="/client/favicon.ico" type="image/x-icon">
+
+        <script src="/client/js/jquery-3.3.1.min.js"></script>
+        <script src="/client/js/popper.min.js"></script>
+        <script src="/client/js/bootstrap.min.js"></script>
+        <script src="/client/js/js.cookie.min.js"></script>
+        <script src="/client/js/index.js"></script>
+        <link href="/client/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+
+    <body class="bg-dark" onload ="pageLoad()">
+
+        <div class="container bg-white">
+
+            <div class="jumbotron text-center">
+                <h1>Welcome to my message board!</h1>
+
+            </div>
+            <marquee direction="up" scrollamount=15>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9EyqZkgOETVzQGejy-XvcMXnrDgn0K8hcV55sqlRf_ZfcM6KvcA">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9EyqZkgOETVzQGejy-XvcMXnrDgn0K8hcV55sqlRf_ZfcM6KvcA">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9EyqZkgOETVzQGejy-XvcMXnrDgn0K8hcV55sqlRf_ZfcM6KvcA">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9EyqZkgOETVzQGejy-XvcMXnrDgn0K8hcV55sqlRf_ZfcM6KvcA">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9EyqZkgOETVzQGejy-XvcMXnrDgn0K8hcV55sqlRf_ZfcM6KvcA">
+            </marquee>
+
+            <div id="messages">
+            </div>
+
+            <div class="container p-3">
+
+                <form class="needs-validation" action="/message/new" method="post" target="_self" id="messageForm">
+                    <div class="form-group form-row">
+                        <div class="col-8">
+                            <label class="w-100">Message<input class="form-control input-lg" name="messageText" required />
+                            </label>
+                        </div>
+                        <p>
+                        <div class="col-3">
+                            <label class="w-100">Author<input class="form-control" name="messageAuthor" required />
+                            </label>
+                        </div>
+                        </p>
+                        <div class="col-1">
+                            <button id="messageSubmit" class="btn btn-success mt-4">Post</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+
+        </div>
+
+
+
+    </body>
+
+</html>
